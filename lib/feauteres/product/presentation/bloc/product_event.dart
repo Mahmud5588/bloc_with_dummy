@@ -8,3 +8,8 @@ class FetchProduct extends ProductEvent {
 }
 
 class FetchProducts extends ProductEvent {}
+
+class SearchProduct extends ProductEvent {
+  final String word;
+  SearchProduct({required this.word});
+}

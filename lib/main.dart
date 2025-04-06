@@ -4,17 +4,12 @@ import 'package:bloc_with_dummy/feauteres/product/presentation/bloc/product_bloc
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'feauteres/product/presentation/bloc/all_product/all_product_bloc.dart';
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setUp();
   runApp(
     MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (context) => sl<ProductBloc>()),
-        BlocProvider(create: (context) => sl<ProductsBloc>()),
-      ],
+      providers: [BlocProvider(create: (context) => sl<ProductBloc>())],
       child: MyApp(),
     ),
   );
